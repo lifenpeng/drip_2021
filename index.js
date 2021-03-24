@@ -33,11 +33,10 @@ app.use(express.static('static/h5'));
 
 app.get('/video', function (req, res) {
     let code1 = req.url.split("?")[1];
-    let code2 = code1.split("=")[1]&&des.decryptByDES(code1.split("=")[1]);
-    if (req.url && code1 && code2) {
-        console.log(code2);
-        fs.exists(__dirname + `/static/video/${code2}.mp4`, function (exists) {
-            exists&&res.sendFile(__dirname + `/static/video/${code2}.mp4` );
+    let code2 = code1&&code1.substring(2);
+    if (code2) {
+        fs.exists(__dirname + `/static/video/${code2}`, function (exists) {
+            exists&&res.sendFile(__dirname + `/static/video/${code2}` );
         });
     }
 })

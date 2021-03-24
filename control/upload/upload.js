@@ -71,7 +71,7 @@ const upload_serve = function (query, path, pool, res, req) {
                                 } else {
                                     pool.getConnection(function (err, connection) {
                                         
-                                        let sql1 = `INSERT INTO video (id,name,url,label,des) VALUES(${id},'${des.encryptByDES(query.name)}','${des.encryptByDES(id.toString())}','${des.encryptByDES(query.label)}','${des.encryptByDES(query.desc)}')`;
+                                        let sql1 = `INSERT INTO video (id,name,url,label,des) VALUES(${id},'${des.encryptByDES(query.name)}','${id}','${des.encryptByDES(query.label)}','${des.encryptByDES(query.desc)}')`;
 
                                         connection.query(sql1, function (error, results, fields) {
                                             if (error) {
