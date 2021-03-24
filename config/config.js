@@ -3,10 +3,17 @@ const config = {
     mysql:{
         connectionLimit: 20,
         host     : 'localhost',
-        user     : 'root',
-        password : 'root',
+        user     : 'drip',
+        password : 'Kdpnsr5hBE2teEZG',
         database : 'drip'
-    }
+    },
+    // mysql:{
+    //     connectionLimit: 20,
+    //     host     : 'localhost',
+    //     user     : 'root',
+    //     password : 'root',
+    //     database : 'drip'
+    // }
 }
 
 module.exports = config;
