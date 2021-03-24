@@ -4,7 +4,7 @@ const config = {
         connectionLimit: 20,
         host     : 'localhost',
         user     : 'drip',
-        password : 'Kdpnsr5hBE2teEZG',
+        password : 'C8EWHCf7RTKak5tT',
         database : 'drip'
     },
     // mysql:{
