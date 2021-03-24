@@ -29,7 +29,7 @@ router(app, pool);
 var httpServer = http.createServer(app);
 
 
-app.use(express.static('static'));
+app.use(express.static('static/h5'));
 
 app.get('/video', function (req, res) {
     let code1 = req.url.split("?")[1];
@@ -40,6 +40,10 @@ app.get('/video', function (req, res) {
             exists&&res.sendFile(__dirname + `/static/video/${code2}.mp4` );
         });
     }
+})
+
+app.get('/home', function (req, res) {
+    res.sendFile(__dirname + `/static/h5/index.html` );
 })
 
 httpServer.listen(config.port, function () {
